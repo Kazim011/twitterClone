@@ -236,6 +236,32 @@
 					"response": []
 				},
 				{
+					"name": "tweet id ye gore",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_ADDRESS}}:{{PORT}}/api/tweets/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"tweets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Tweet Add",
 					"request": {
 						"method": "POST",

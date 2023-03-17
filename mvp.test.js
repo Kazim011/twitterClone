@@ -136,7 +136,7 @@ describe("COMMENTS TEST", () => {
 describe("Users Test GET isteği", () => {
   it("[1] Doğru Sayıda Users Geliyor mu ", async () => {
     const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2Nzg5Njk2NjAsImV4cCI6MTY3OTA1NjA2MH0.W8kmCJAb-U7rawyc1a4D-MXeDQhG2RLVxL4AnWdnpNE";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2NzkwNTQyMTIsImV4cCI6MTY3OTE0MDYxMn0.oo0VNSed_i-zZD2DS47mn5PpNrcxNFdJ1tpx9K0UY2s";
     const res = await superTest(server)
       .get("/api/users")
       .set("Authorization", token);
@@ -146,7 +146,7 @@ describe("Users Test GET isteği", () => {
 
   it("[2] İstenilen id yoksa 404 hata kodu dönüyor", async () => {
     const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2Nzg5Njk2NjAsImV4cCI6MTY3OTA1NjA2MH0.W8kmCJAb-U7rawyc1a4D-MXeDQhG2RLVxL4AnWdnpNE";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2NzkwNTQyMTIsImV4cCI6MTY3OTE0MDYxMn0.oo0VNSed_i-zZD2DS47mn5PpNrcxNFdJ1tpx9K0UY2s";
     const res = await superTest(server)
       .get("/api/users/5")
       .set("Authorization", token);
@@ -158,7 +158,7 @@ describe("Users Test GET isteği", () => {
 describe("Tweets Test GET isteği", () => {
   it("[1] Doğru Sayıda Tweets Geliyor mu ", async () => {
     const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2Nzg5Njk2NjAsImV4cCI6MTY3OTA1NjA2MH0.W8kmCJAb-U7rawyc1a4D-MXeDQhG2RLVxL4AnWdnpNE";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2NzkwNTQyMTIsImV4cCI6MTY3OTE0MDYxMn0.oo0VNSed_i-zZD2DS47mn5PpNrcxNFdJ1tpx9K0UY2s";
     const res = await superTest(server)
       .get("/api/tweets")
       .set("Authorization", token);
@@ -168,9 +168,9 @@ describe("Tweets Test GET isteği", () => {
 
   it("[2] İstenilen id yoksa 404 hata kodu dönüyor", async () => {
     const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2Nzg5Njk2NjAsImV4cCI6MTY3OTA1NjA2MH0.W8kmCJAb-U7rawyc1a4D-MXeDQhG2RLVxL4AnWdnpNE";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2NzkwNTQyMTIsImV4cCI6MTY3OTE0MDYxMn0.oo0VNSed_i-zZD2DS47mn5PpNrcxNFdJ1tpx9K0UY2s";
     const res = await superTest(server)
-      .get("/api/tweets/5")
+      .get("/api/tweets/7")
       .set("Authorization", token);
     expect(res.status).toBe(404);
     expect(res.body.message).toBe("id bulunamadı");
@@ -180,7 +180,7 @@ describe("Tweets Test GET isteği", () => {
 describe("Comments Test GET isteği", () => {
   it("[1] Doğru Sayıda Comments Geliyor mu ", async () => {
     const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2Nzg5Njk2NjAsImV4cCI6MTY3OTA1NjA2MH0.W8kmCJAb-U7rawyc1a4D-MXeDQhG2RLVxL4AnWdnpNE";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2NzkwNTQyMTIsImV4cCI6MTY3OTE0MDYxMn0.oo0VNSed_i-zZD2DS47mn5PpNrcxNFdJ1tpx9K0UY2s";
     const res = await superTest(server)
       .get("/api/comments")
       .set("Authorization", token);
@@ -190,7 +190,7 @@ describe("Comments Test GET isteği", () => {
 
   it("[2] İstenilen id yoksa 404 hata kodu dönüyor", async () => {
     const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2Nzg5Njk2NjAsImV4cCI6MTY3OTA1NjA2MH0.W8kmCJAb-U7rawyc1a4D-MXeDQhG2RLVxL4AnWdnpNE";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2NzkwNTQyMTIsImV4cCI6MTY3OTE0MDYxMn0.oo0VNSed_i-zZD2DS47mn5PpNrcxNFdJ1tpx9K0UY2s";
     const res = await superTest(server)
       .get("/api/comments/5")
       .set("Authorization", token);

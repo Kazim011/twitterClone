@@ -13,7 +13,12 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:id", mdw.checkUserId, (req, res, next) => {
+router.get("/:id", mdw.checkTweetId, async (req, res, next) => {
+  const insertedId = await tweetModel.getTweetById(req.params.id);
+  res.status(200).json(insertedId);
+});
+
+router.get("/users/:id", mdw.checkUserId, (req, res, next) => {
   res.status(200).json(req.yorum);
 });
 
